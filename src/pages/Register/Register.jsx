@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import './Register.css';
 import axios from 'axios';
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+const api_url=process.env.API_URL;
 
 export default function Register() {
     const username=useRef();
@@ -22,7 +23,7 @@ export default function Register() {
                 password:password.current.value,
             }
             try{
-                await axios.post("auth/register",user);
+                await axios.post(api_url+"auth/register",user);
                 navigate("/login");
             }
             catch(err){

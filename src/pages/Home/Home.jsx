@@ -5,6 +5,7 @@ import Tile from '../../components/Tile/Tile';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 const curuser=JSON.parse(sessionStorage.getItem("user"));
+const api_url=process.env.API_URL;
 
 function Home(){
   const [userRecipes,setUserRecipes]=useState([]);
@@ -14,9 +15,9 @@ function Home(){
 
   useEffect(() => {
     const fetchrecipe = async()=>{
-      const userRecipe = await axios.get(`/recipe/getall/${username}`);
+      const userRecipe = await axios.get(`${api_url}/recipe/getall/${username}`);
       setUserRecipes(userRecipe.data);
-      const suggestions = await axios.get(`/recipe/suggest/all`);
+      const suggestions = await axios.get(`${api_url}/recipe/suggest/all`);
       setSuggestions(suggestions.data);
     };
     fetchrecipe();

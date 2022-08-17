@@ -4,6 +4,7 @@ import Header from '../../components/Header/Header';
 import Tile from '../../components/Tile/Tile';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+const api_url=process.env.API_URL;
 
 function Search(){
   const [Recipes,setRecipes]=useState([]);
@@ -11,7 +12,7 @@ function Search(){
 
   useEffect(() => {
     const fetchrecipe = async()=>{
-      const searchRecipes = await axios.get(`/recipe/search/${val}`);
+      const searchRecipes = await axios.get(api_url+`/recipe/search/${val}`);
       setRecipes(searchRecipes.data);
     };
     fetchrecipe();

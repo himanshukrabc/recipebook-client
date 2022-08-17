@@ -3,6 +3,7 @@ import './Login.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+const api_url=process.env.API_URL;
 
 export default function Login() {
     const email=useRef();
@@ -10,7 +11,7 @@ export default function Login() {
     const handleClick=async(e)=>{
         e.preventDefault();
         try{
-            const user = (await axios.post('/auth/login',{"email":email.current.value,"password":password.current.value})).data;
+            const user = (await axios.post(api_urlL+'/auth/login',{"email":email.current.value,"password":password.current.value})).data;
             sessionStorage.setItem("user",JSON.stringify(user));
             window.location.href="/";
         }

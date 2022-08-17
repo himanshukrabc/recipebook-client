@@ -12,6 +12,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 const curuser=JSON.parse(sessionStorage.getItem('user'));
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+const api_url=process.env.API_URL;
 
 function Recipe() {
   const [ing,seting]=useState([]);
@@ -26,7 +27,7 @@ function Recipe() {
   useEffect(() => {
     try{
       const getrecipe=async ()=>{
-        const recipe=await axios.get(`/recipe/get/${recipeid}`);
+        const recipe=await axios.get(api_url+`/recipe/get/${recipeid}`);
         if(recipe.data.username===curuser.username){
           setdisabled("enabled");
         }
@@ -43,14 +44,14 @@ function Recipe() {
     }
   }, [recipeid]);
   const db_update_ing = async(arr)=>{
-    await axios.put(`/recipe/get/${recipeid}`,{"ingridients":arr});
+    await axios.put(api_url+`/recipe/get/${recipeid}`,{"ingridients":arr});
   }
   const updateing = (arr)=>{
     seting(arr);
     db_update_ing(arr);
   }
   const db_update_dir = async(arr)=>{
-    await axios.put(`/recipe/get/${recipeid}`,{"directions":arr});
+    await axios.put(api_url+`/recipe/get/${recipeid}`,{"directions":arr});
   }
   const updatedir = (arr)=>{
     setdir(arr);

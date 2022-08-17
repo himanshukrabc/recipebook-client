@@ -6,6 +6,7 @@ import DirectionsList from '../../components/DirectionsList/DirectionsList';
 import axios from 'axios';
 const curuser=JSON.parse(sessionStorage.getItem('user'));
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+const api_url=process.env.API_URL;
 
 function NewRecipe() {
   const [ing,seting]=useState([]);
@@ -35,14 +36,14 @@ function NewRecipe() {
       data.append("name", newfilename);
       data.append("file", file);
       try {
-        await axios.post("/upload", data);
+        await axios.post(api_url+"/upload", data);
         newRecipe.recipeImg=newfilename;
       } catch (err) {
         console.log(err);
       }
     }
     try{
-      const created = await axios.post(`/recipe/create`,newRecipe);
+      const created = await axios.post(api_url+`/recipe/create`,newRecipe);
       window.location.href = `/recipe/${created.data._id}`;
     }
     catch(err){
