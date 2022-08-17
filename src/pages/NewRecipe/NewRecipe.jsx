@@ -1,4 +1,4 @@
-import React,{ useState} from 'react'
+import React,{ useState,useNavigate} from 'react'
 import Header from '../../components/Header/Header';
 import './NewRecipe.css'
 import IngridientList from '../../components/IngridientList/IngridientList';
@@ -11,6 +11,7 @@ function NewRecipe() {
   const [dir,setdir]=useState([]);
   const [recipename,setrecipename]=useState("");
   const [file,setFile]=useState("");
+  const navigate=useNavigate();
   const updateing = (arr)=>{
     seting(arr);
   }
@@ -41,7 +42,7 @@ function NewRecipe() {
     }
     try{
       const created = await axiosInstance.post(`/recipe/create`,newRecipe);
-      window.location.href = `/recipe/${created.data._id}`;
+      navigate(`/recipe/${created.data._id}`);
     }
     catch(err){
       console.log(err);
