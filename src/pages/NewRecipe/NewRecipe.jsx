@@ -56,7 +56,6 @@ function NewRecipe() {
       <div className="recipe-container">
         <input type="text" onChange={(e)=>{setrecipename(e.target.value)}} value={recipename} className="recipe-header" placeholder='Add Recipe Name'/>
         <div className="img-container">
-          <img src={file?file:stock} alt="Img" className='recipe-img'/>
           <input type="file" id="file" accept=".png,.jpeg,.jpg" onChange={(e) => setFile(e.target.files[0])}/>
         </div>
         <div className="recipe-info">
