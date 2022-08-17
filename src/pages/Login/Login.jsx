@@ -19,7 +19,7 @@ export default function Login() {
         }
     };
     return (
-      <div className="login" style={{ backgroundImage: `url(${PF}login2.jpg)` }}>
+      <div className="login" style={{ backgroundImage: `url(${PF}login1.jpg)` }}>
             <div className="loginWrapper">
                 <div className="loginLeft">
                     <h3 className="loginLogo">RecipeBook</h3>
