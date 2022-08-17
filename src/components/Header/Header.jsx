@@ -1,15 +1,16 @@
 import React from 'react';
 import './Header.css';
-import {NavLink} from 'react-router-dom';   
+import {NavLink, useNavigate} from 'react-router-dom';   
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 const curuser=JSON.parse(sessionStorage.getItem("user"));
+const navigate=useNavigate();
 
 const Search=(event)=>{
     if(event.key==="Enter"&&event.target.value) {
         event.preventDefault();
         const val=event.target.value;
         event.target.value="";
-        window.location.href=`./search/${val}`;
+        navigate(`/search/${val}`);
     }
 }
 
