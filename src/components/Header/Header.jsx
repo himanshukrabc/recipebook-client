@@ -9,7 +9,7 @@ const Search=(event)=>{
         event.preventDefault();
         const val=event.target.value;
         event.target.value="";
-        window.location.href=`/search/${val}`;
+        location.url(`/search/${val}`);
     }
 }
 
