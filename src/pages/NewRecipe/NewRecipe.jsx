@@ -5,14 +5,12 @@ import IngridientList from '../../components/IngridientList/IngridientList';
 import DirectionsList from '../../components/DirectionsList/DirectionsList';
 import { axiosInstance } from '../../config';
 const curuser=JSON.parse(sessionStorage.getItem('user'));
-const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
 function NewRecipe() {
   const [ing,seting]=useState([]);
   const [dir,setdir]=useState([]);
   const [recipename,setrecipename]=useState("");
   const [file,setFile]=useState("");
-  const stock=PF+'add.jpg';
   const updateing = (arr)=>{
     seting(arr);
   }
