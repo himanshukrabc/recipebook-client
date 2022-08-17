@@ -3,19 +3,20 @@ import './Header.css';
 import {NavLink, useNavigate} from 'react-router-dom';   
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 const curuser=JSON.parse(sessionStorage.getItem("user"));
-const navigate=useNavigate();
-
-const Search=(event)=>{
-    if(event.key==="Enter"&&event.target.value) {
-        event.preventDefault();
-        const val=event.target.value;
-        event.target.value="";
-        navigate(`/search/${val}`);
-    }
-}
 
 function Header() {
-  return (
+    const navigate=useNavigate();
+
+    const Search=(event)=>{
+        if(event.key==="Enter"&&event.target.value) {
+            event.preventDefault();
+            const val=event.target.value;
+            event.target.value="";
+            navigate(`/search/${val}`);
+        }
+    }    
+    
+    return (
         <div className="container">
             <div className="container-left">
                 <NavLink to='/' className='NavLink' end>RecipeBook</NavLink> 
