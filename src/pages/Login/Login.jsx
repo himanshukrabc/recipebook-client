@@ -10,6 +10,7 @@ export default function Login() {
     const password=useRef();
     const handleClick=async(e)=>{
         e.preventDefault();
+        console.log(api_url+'/auth/login');
         try{
             const user = (await axios.post(api_url+'/auth/login',{"email":email.current.value,"password":password.current.value})).data;
             sessionStorage.setItem("user",JSON.stringify(user));
