@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Home.css'
 import Header from '../../components/Header/Header';
 import Tile from '../../components/Tile/Tile';
-import { axiosInstance } from '../../../config';
+import { axiosInstance } from '../../config';
 import { NavLink } from 'react-router-dom';
 const curuser=JSON.parse(sessionStorage.getItem("user"));
 

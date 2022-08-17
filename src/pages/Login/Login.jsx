@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
-import { axiosInstance } from '../../../config';
+import { axiosInstance } from '../../config';
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
 export default function Login() {

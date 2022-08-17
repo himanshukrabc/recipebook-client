@@ -3,7 +3,7 @@ import './Search.css'
 import Header from '../../components/Header/Header';
 import Tile from '../../components/Tile/Tile';
 import { useParams } from 'react-router-dom';
-import { axiosInstance } from '../../../config';
+import { axiosInstance } from '../../config';
 
 function Search(){
   const [Recipes,setRecipes]=useState([]);

@@ -9,7 +9,7 @@ import IngridientList from '../../components/IngridientList/IngridientList';
 import DirectionsList from '../../components/DirectionsList/DirectionsList';
 import EditIcon from '@mui/icons-material/Edit';
 import { useEffect } from 'react';
-import { axiosInstance } from '../../../config';
+import { axiosInstance } from '../../config';
 const curuser=JSON.parse(sessionStorage.getItem('user'));
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 

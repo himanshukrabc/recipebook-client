@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import React, { useRef } from 'react'
 import './Register.css';
-import { axiosInstance } from '../../../config';
+import { axiosInstance } from '../../config';
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
 export default function Register() {
