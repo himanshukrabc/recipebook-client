@@ -1,0 +1,55 @@
+.container{
+    z-index: 5;
+    height: 8vh;
+    width:100vw;
+    background-color: #202226;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 1.5em;
+    color:#fff9ed;
+    position: fixed;
+}
+
+.container-left{
+    flex:0.3;
+}
+
+.container-center{
+    flex:0.6;
+    display: flex;
+}
+
+.container-center > input{
+    width:90%;
+    border:none;
+    height:4vh;
+    padding-left: 1vw;
+    border-radius: 1vh;
+    font-size: 0.6em;
+}
+
+input:focus{
+    outline: none;
+}
+
+.container-right{
+    flex:0.22;
+    display: flex;
+    overflow: hidden;
+}
+
+.username{
+    padding-left: 2vw;
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.NavLink{
+    text-decoration: none;
+    color:white;
+}

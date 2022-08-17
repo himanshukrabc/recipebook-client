@@ -1,0 +1,18 @@
+.suggestions{
+    padding-top: 10vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    background-color: #fffbf4;
+}
+
+.tile-list{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fffbf4;
+}
+
+.theading{
+    font-size: 2em;
+    background-color: #fffbf4;
+    font-weight: 500;
+}

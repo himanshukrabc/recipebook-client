@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+
+.ing-list-main{
+  display: flex;
+  font-family: 'Catamaran', sans-serif;
+} 
+
+.ing-list-center{
+    padding: 2vh 0;
+    background-color: #fffbf4;
+    width: 100%;
+    border-radius: 1vw;
+}
+
+.ing-list-list{
+  list-style: none;
+  text-align: left;
+}
+
+.ing-list-item{
+  margin: 0.5vh 0;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ing-text-area{
+  font-size: 1em;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #202226;
+  background-color: #fffbf4;
+  margin: 10px;
+}
+
+.ing-add,.ing-remove{
+  background-color: #202226;  
+  color: #fffbf4;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+}
+
+li{
+  line-height: 40px;
+}

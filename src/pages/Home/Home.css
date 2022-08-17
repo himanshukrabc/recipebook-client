@@ -1,0 +1,49 @@
+.user-recipes,.suggestions{
+    padding-top: 10vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    background-color: #fffbf4;
+}
+
+.user-tile-list{
+    display: flex;
+    overflow: auto;
+    background-color: #fffbf4;
+}
+.tile-list{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fffbf4;
+}
+
+.theading{
+    font-size: 2em;
+    background-color: #fffbf4;
+    font-weight: 500;
+}
+
+.add-recipe{
+    position: relative;
+    top: 5vh;
+    left: 5vw;
+    border:3px solid #202226;
+    border-radius: 10px;
+    height: 5vh;
+    font-size: 1.25em;
+    color:#fffbf4;  
+    background-color:#202226;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.nav-link-add{
+    display: inline;
+    margin-right: 20px;
+    cursor: pointer;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+NavLink{
+    text-decoration: none;
+}

@@ -1,0 +1,75 @@
+.recipe-container{
+    width:60%;
+    margin:auto;
+    position: relative;
+    top:15vh;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+.img-container{
+    width: 85%;
+    object-fit: contain;
+    margin: auto;
+}
+
+.recipe-img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.recipe-header{
+    width: 85%;
+    padding: 20px 0px;
+    background-color: #fffbf4;
+    margin:auto;
+    text-align: left;
+    font-size: 2.5em;
+    border: none;
+}
+
+.recipe-info{
+    width: 85%;
+    padding: 20px 0px;
+    margin:auto;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.heading{
+    font-size: 1.5em;
+    padding-bottom: 1vh;
+}
+
+.subheading{
+    line-height: 5vh;
+    color:grey;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ingtag{
+    line-height: 5vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 3vw;
+}
+
+.subinfo{
+    padding-left: 3vw;
+}
+
+.ingedit,.diredit{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+}
+
+.disabled{
+    display: none;
+}
